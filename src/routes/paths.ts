@@ -47,10 +47,6 @@ export const paths = {
   // DASHBOARD
   dashboard: {
     root: ROOTS.DASHBOARD,
-    admin: {
-      root: `${ROOTS.DASHBOARD}/admin`,
-      nft: `${ROOTS.DASHBOARD}/admin/nft`,
-      token: `${ROOTS.DASHBOARD}/admin/token`,
-    },
+    blank: `${ROOTS.DASHBOARD}/blank`,
   },
 };

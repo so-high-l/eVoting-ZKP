@@ -15,6 +15,7 @@ const ICONS = {
   lock: icon('ic-lock'),
   dashboard: icon('ic-dashboard'),
   parameter: icon('ic-parameter'),
+  blank: icon('ic-blank'),
 };
 
 // ----------------------------------------------------------------------
@@ -24,16 +25,12 @@ export const navData = [
    * Overview
    */
   {
-    subheader: 'Admin panel',
+    subheader: 'Overview',
     items: [
       {
-        title: 'Smart Contracts',
-        path: paths.dashboard.admin.root,
-        icon: ICONS.lock,
-        children: [
-          { title: 'Gestion NFTs', path: paths.dashboard.admin.nft, icon: ICONS.parameter },
-          { title: 'Gestion HIRE3Token', path: paths.dashboard.admin.token, icon: ICONS.analytics },
-        ],
+        title: 'Blank',
+        path: paths.dashboard.blank,
+        icon: ICONS.blank,
       },
     ],
   },

@@ -7,5 +7,5 @@ import { BlankView } from 'src/shared/sections/blank/view';
 export const metadata = { title: `Dashboard - ${CONFIG.site.name}` };
 
 export default function Page() {
-  return <BlankView title="Management du Token HIRE3" />;
+  return <BlankView title="Blank" />;
 }
