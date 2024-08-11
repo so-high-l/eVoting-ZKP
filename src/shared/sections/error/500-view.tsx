@@ -9,7 +9,6 @@ import Typography from '@mui/material/Typography';
 import { RouterLink } from 'src/routes/components';
 
 import { SimpleLayout } from 'src/shared/layouts/simple';
-import { ServerErrorIllustration } from 'src/shared/assets/illustrations';
 
 import { varBounce, MotionContainer } from 'src/shared/components/animate';
 
@@ -29,10 +28,6 @@ export function View500() {
           <Typography sx={{ color: 'text.secondary' }}>
             There was an error, please try again later.
           </Typography>
-        </m.div>
-
-        <m.div variants={varBounce().in}>
-          <ServerErrorIllustration sx={{ my: { xs: 5, sm: 10 } }} />
         </m.div>
 
         <Button component={RouterLink} href="/" size="large" variant="contained">

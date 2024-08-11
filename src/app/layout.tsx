@@ -14,7 +14,6 @@ import { MotionLazy } from 'src/shared/components/animate/motion-lazy';
 import { detectSettings } from 'src/shared/components/settings/server';
 import { SettingsDrawer, defaultSettings, SettingsProvider } from 'src/shared/components/settings';
 
-import { AuthProvider } from 'src/auth/context/jwt';
 
 // ----------------------------------------------------------------------
 
@@ -36,7 +35,6 @@ export default async function RootLayout({ children }: Props) {
       <body>
         {getInitColorSchemeScript}
 
-        <AuthProvider>
           <SettingsProvider
             settings={settings}
             caches={CONFIG.isStaticExport ? 'localStorage' : 'cookie'}
@@ -49,7 +47,6 @@ export default async function RootLayout({ children }: Props) {
               </MotionLazy>
             </ThemeProvider>
           </SettingsProvider>
-        </AuthProvider>
       </body>
     </html>
   );

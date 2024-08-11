@@ -21,17 +21,16 @@ const ICONS = {
 // ----------------------------------------------------------------------
 
 export const navData = [
-  /**
-   * Overview
-   */
+
   {
-    subheader: 'Overview',
+    subheader: 'Smart contracts',
     items: [
       {
-        title: 'Blank',
-        path: paths.dashboard.blank,
-        icon: ICONS.blank,
+        title: 'NFT Contract',
+        path: paths.dashboard.nftsmartcontract,
+        icon: ICONS.lock,
       },
+
     ],
   },
 ];

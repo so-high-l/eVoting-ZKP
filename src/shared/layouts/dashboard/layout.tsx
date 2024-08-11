@@ -12,21 +12,15 @@ import { iconButtonClasses } from '@mui/material/IconButton';
 
 import { useBoolean } from 'src/hooks/use-boolean';
 
-import { allLangs } from 'src/shared/locales';
-import { _contacts, _notifications } from 'src/shared/_mock';
 import { varAlpha, stylesMode } from 'src/shared/theme/styles';
 
 import { bulletColor } from 'src/shared/components/nav-section';
 import { useSettingsContext } from 'src/shared/components/settings';
 
 import { Main } from './main';
-import { NavMobile } from './nav-mobile';
 import { layoutClasses } from '../classes';
 import { NavVertical } from './nav-vertical';
-import { NavHorizontal } from './nav-horizontal';
-import { _account } from '../config-nav-account';
 import { HeaderBase } from '../core/header-base';
-import { _workspaces } from '../config-nav-workspace';
 import { LayoutSection } from '../core/layout-section';
 import { navData as dashboardNavData } from '../config-nav-dashboard';
 
@@ -60,15 +54,7 @@ export function DashboardLayout({ sx, children, data }: DashboardLayoutProps) {
   const isNavVertical = isNavMini || settings.navLayout === 'vertical';
 
   return (
-    <>
-      <NavMobile
-        data={navData}
-        open={mobileNavOpen.value}
-        onClose={mobileNavOpen.onFalse}
-        cssVars={navColorVars.section}
-      />
-
-      <LayoutSection
+    <LayoutSection
         /** **************************************
          * Header
          *************************************** */
@@ -79,16 +65,9 @@ export function DashboardLayout({ sx, children, data }: DashboardLayoutProps) {
             onOpenNav={mobileNavOpen.onTrue}
             data={{
               nav: navData,
-              langs: allLangs,
-              account: _account,
-              contacts: _contacts,
-              workspaces: _workspaces,
-              notifications: _notifications,
             }}
             slotsDisplay={{
-              signIn: false,
-              purchase: false,
-              helpLink: false,
+              connectWallet: true
             }}
             slots={{
               topArea: (
@@ -96,13 +75,7 @@ export function DashboardLayout({ sx, children, data }: DashboardLayoutProps) {
                   This is an info Alert.
                 </Alert>
               ),
-              bottomArea: isNavHorizontal ? (
-                <NavHorizontal
-                  data={navData}
-                  layoutQuery={layoutQuery}
-                  cssVars={navColorVars.section}
-                />
-              ) : null,
+              
             }}
             slotProps={{
               toolbar: {
@@ -197,7 +170,6 @@ export function DashboardLayout({ sx, children, data }: DashboardLayoutProps) {
       >
         <Main isNavHorizontal={isNavHorizontal}>{children}</Main>
       </LayoutSection>
-    </>
   );
 }
 

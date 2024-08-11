@@ -83,7 +83,6 @@ module.exports = {
           'internal',
           'custom-components',
           'custom-sections',
-          'custom-auth',
           'custom-types',
           ['parent', 'sibling', 'index'],
           ['parent-type', 'sibling-type', 'index-type'],
@@ -93,7 +92,6 @@ module.exports = {
         'custom-groups': {
           value: {
             ['custom-mui']: '@mui/**',
-            ['custom-auth']: 'src/auth/**',
             ['custom-hooks']: 'src/hooks/**',
             ['custom-utils']: 'src/utils/**',
             ['custom-types']: 'src/types/**',
